@@ -1,13 +1,10 @@
 import express from 'express';
+import categorieController from '../../controllers/categories/categories.js';
 
 const router = express.Router();
 
-router.get('/all', (req, res) => {
-    res.send('This is all categories');
-});
-router.get('/:id', (req, res) => {
-    res.send(`This is category with id ${req.params.id}`);
-});
+router.get('/all',categorieController.getCategories);
+
 
 export default router;
     

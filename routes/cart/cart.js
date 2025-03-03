@@ -1,10 +1,9 @@
 import express from 'express';
+import cartController from '../../controllers/cart/cart.js';
 
 const router = express.Router();
 
-router.get('/all', (req, res) => {
-    res.send('This is all products in the cart');
-});
+router.get('/all', cartController.getCart);
  
 
 export default router;
