@@ -3,6 +3,6 @@ import signupController from '../../controllers/auth/signup.js';
 
 const router = express.Router();
 
-router.get('/', signupController.addUser);
+router.post('/', signupController.addUser);
 
 export default router;
